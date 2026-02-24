@@ -1,56 +1,94 @@
-# AI Document Summarizer & Extractor
+# AI Document Summarizer
 
-## Pages & Features
+AI-powered document summarization and key information extraction.
 
-### 1. Dashboard
-- Documents processed today / this week
-- Storage usage overview
-- Recent summaries quick-access
-- Processing queue status
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Upload & Process
-- Drag-and-drop file upload (PDF, DOCX, images, scans)
-- Batch upload support
-- OCR for scanned documents & images
-- Processing progress indicator
-- URL-based document import
+## Tech Stack
 
-### 3. AI Summary
-- Auto-generated executive summary
-- Key points & highlights extraction
-- Adjustable summary length (brief, detailed, comprehensive)
-- Section-by-section breakdown
-- Comparison summary across multiple documents
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Data Extraction
-- Named entity extraction (names, dates, amounts, addresses)
-- Table & structured data extraction
-- Clause identification for contracts
-- Custom field extraction rules
-- Export extracted data as JSON / CSV
+## Getting Started
 
-### 5. Document Library
-- Searchable document archive
-- Full-text search across all documents
-- Tag, folder & category organization
-- Version tracking per document
-- Favorite & bookmark documents
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Q&A Interface
-- Ask questions about uploaded documents
-- AI answers with source citations
-- Multi-document querying
-- Conversation history per document set
+## License
 
-### 7. Export & Share
-- Download summaries as PDF / DOCX
-- Share summary links with team
-- Push extracted data to external tools (CRM, spreadsheet)
-- API access for automated processing
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Supported languages & OCR configuration
-- Default summary preferences
-- Retention & auto-delete policies
-- API key management
-- Team access & permissions
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
